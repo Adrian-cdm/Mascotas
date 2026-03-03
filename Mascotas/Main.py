@@ -149,7 +149,7 @@ def asistente_mascotas():
     mascota = input("¿Qué mascota tienes? (perro/gato): ").lower()
 
     if mascota not in BASE_CONOCIMIENTO:
-        print("❌ Mascota no soportada.")
+        print("❌ Mascota no encontrada.")
         return
 
     mostrar_problemas(mascota)
@@ -157,13 +157,14 @@ def asistente_mascotas():
     problema = input("\nEscribe el problema exactamente como aparece arriba: ").lower()
 
     if problema not in BASE_CONOCIMIENTO[mascota]:
-        print("❌ Problema no registrado.")
+        print("❌ Problema no encontrado.")
         return
 
     obtener_recomendacion(mascota, problema)
 
-    print("\n❤️ Gracias por cuidar de tu mascota.")
+    print("\n❤️ Gracias por elegir este programa para cuidar de tu Mascota espero que esta recmendacion haya sido de ayuda.")
 
 
 # Ejecutar
 asistente_mascotas()
+
